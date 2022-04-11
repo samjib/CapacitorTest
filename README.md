@@ -1,46 +1,69 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Capacitor Test
 
-## Available Scripts
+A small test project in React with Typescript to demo some Capacitor functionality.
 
-In the project directory, you can run:
+Current plugins:
 
-### `yarn start`
+- @capacitor/action-sheet
+- @capacitor/camera
+- @capacitor/device
+- @capacitor/geolocation
+- @capacitor/haptics
+- @capacitor/local-notifications
+- @capacitor/screen-reader
+- @capacitor/share
+- @capacitor/toast
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Run On Web
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```npm
+npm install
+npm start
+```
 
-### `yarn test`
+## Run On Android
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_The first time you clone the repository, the project will need to be built in Android Studio, but after that you can just follow the [Live Realod](#with-live-reload) or [Offlne](#deploy-offline) instructions_
 
-### `yarn build`
+```npm
+npm install
+npm run open-android-studio
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Build the project in Android Studio, then you can close Android Studio.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### With Live Reload
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Set server URL for [live reload](#live-reload)
 
-### `yarn eject`
+```npm
+npm install
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Leave the development server running, open a new terminal and run:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```npm
+npm run debug-android
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Deploy Offline
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Remove the server element in the [capacitor config file](./capacitor.config.ts) mentioned in the [live reload section](#live-reload).
 
-## Learn More
+```npm
+npm run build
+npm run debug-android
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Live Reload
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Set the `server.url` property in the [capacitor config file](#live-reload) to the LAN IP of your machine, i.e. `10.0.0.20`. If you are using the Android emulator instead of a physical device, you can use the `10.0.2.2` host loopback address instead of having to maintain your real LAN IP.
+
+```json
+server: {
+  "url": "http://10.0.2.2:3000",
+  cleartext: true
+}
+```
