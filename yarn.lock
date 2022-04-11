@@ -1131,6 +1131,11 @@
   "resolved" "https://registry.npmjs.org/@capacitor/local-notifications/-/local-notifications-1.1.0.tgz"
   "version" "1.1.0"
 
+"@capacitor/screen-reader@^1.0.8":
+  "integrity" "sha512-FPhXWU1uSGDeFr6TEbSZ+fHnLjbcuffx78No/bJYqjYI+ecgloEHBB4gVxp6Ycaws7oBJuUVKcmBv3S7lqfe0w=="
+  "resolved" "https://registry.npmjs.org/@capacitor/screen-reader/-/screen-reader-1.0.8.tgz"
+  "version" "1.0.8"
+
 "@capacitor/share@^1.1.2":
   "integrity" "sha512-FUTdjA7MAiD1tkGVZ+C3gs7a4fyEhXojDO2HkZ954oupG1cQ51dEJ1xTNnR9BAmCwUJO4sa91cxy7SMyCDPuGg=="
   "resolved" "https://registry.npmjs.org/@capacitor/share/-/share-1.1.2.tgz"

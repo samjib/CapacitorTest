@@ -1,0 +1,8 @@
+.screen-reader-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.screen-reader-page * {
+    margin-bottom: 0.5em;
+}
