@@ -1,0 +1,8 @@
+.toast-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.toast-page > * {
+    margin-bottom: 0.5em;
+}

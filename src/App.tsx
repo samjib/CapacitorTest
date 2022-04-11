@@ -6,13 +6,14 @@ import CameraPage from './Pages/Camera/CameraPage';
 import HomePage from './Pages/Home/HomePage';
 import LocalNotificationPage from './Pages/LocalNotifications/LocalNotificationsPage';
 import { createTheme, Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, ThemeProvider, Toolbar, Typography } from '@mui/material';
-import { Camera, ChevronLeft, GraphicEq, Home, LocationOn, Menu, Notifications, Share, Vibration } from '@mui/icons-material';
+import { Camera, ChevronLeft, GraphicEq, Home, LocationOn, Menu, NotificationAdd, Notifications, Share, Vibration } from '@mui/icons-material';
 import GeolocationPage from './Pages/Geolocation/GeolocationPage';
 import SharePage from './Pages/Share/SharePage';
 import HapticPage from './Pages/Haptic/HapticPage';
 import ChartsPage from './Pages/Charts/ChartsPage';
 import { ReactChart } from 'chartjs-react';
 import { BarController, LinearScale, PointElement, BarElement, TimeScale, Tooltip, ScatterController, LineElement } from 'chart.js';
+import ToastPage from './Pages/Toast/Toast';
 
 function App() {
 
@@ -68,6 +69,7 @@ function App() {
                   { title: "Share", href: "/share", icon: <Share /> },
                   { title: "Haptic", href: "/haptic", icon: <Vibration /> },
                   { title: "Charts", href: "/charts", icon: <GraphicEq /> },
+                  { title: "Toast", href: "/toast", icon: <NotificationAdd /> },
                 ].map(menuItem =>
                   <ListItem key={menuItem.title} button component={Link} to={menuItem.href} onClick={handleDrawerClose}>
                     <ListItemIcon>{menuItem.icon}</ListItemIcon>
@@ -84,6 +86,7 @@ function App() {
             <Route path="/share" element={<SharePage />} />
             <Route path="/haptic" element={<HapticPage />} />
             <Route path="/charts" element={<ChartsPage />} />
+            <Route path="/toast" element={<ToastPage />} />
           </Routes>
         </div>
       </BrowserRouter>
@@ -97,7 +100,3 @@ export default App;
 //dialog
 //screen reader
 //splash screen
-//toast
-
-
-//chartjs
