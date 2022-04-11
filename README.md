@@ -59,7 +59,7 @@ npm run debug-android
 
 ## Live Reload
 
-Set the `server.url` property in the [capacitor config file](#live-reload) to the LAN IP of your machine, i.e. `10.0.0.20`. If you are using the Android emulator instead of a physical device, you can use the `10.0.2.2` host loopback address instead of having to maintain your real LAN IP.
+Set the `server.url` property in the [capacitor config file](./capacitor.config.ts) to the LAN IP of your machine, i.e. `10.0.0.20`. If you are using the Android emulator instead of a physical device, you can use the `10.0.2.2` host loopback address instead of having to maintain your real LAN IP.
 
 ```json
 server: {
