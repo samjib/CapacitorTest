@@ -6,7 +6,7 @@ const config: CapacitorConfig = {
   webDir: 'build',
   bundledWebRuntime: false,
   server: { // only required during development on web and emulator
-    "url": "http://10.0.0.150:3000",
+    "url": "http://10.0.2.2:3000",
     cleartext: true
   }
 };
